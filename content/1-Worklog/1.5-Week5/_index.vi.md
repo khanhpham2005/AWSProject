@@ -8,21 +8,21 @@ pre: " <b> 1.5. </b> "
 
 ### Mục tiêu tuần 5
 
-* Đưa back-end lên AWS Lambda, chạy hoàn toàn serverless.
-* Gắn IAM Role và kiểm thử Lambda độc lập.
+* Triển khai back-end lên AWS Lambda theo mô hình serverless.
+* Thiết lập IAM Role và kiểm thử hàm Lambda độc lập.
 
 ### Các công việc trong tuần (29/06 - 03/07/2026)
 
 | Thứ | Công việc | Bắt đầu | Hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | Viết một Lambda handler thuần điều hướng event API Gateway HTTP API theo method và path, đóng gói thành file zip để deploy cho runtime Python. | 29/06/2026 | 29/06/2026 | [Serverless lab](https://000078.awsstudygroup.com) |
-| 3 | Xử lý cold start và tinh chỉnh hàm: tăng bộ nhớ (vd 512 MB), đặt timeout hợp lý (15s) và đọc cấu hình từ biến môi trường. | 30/06/2026 | 30/06/2026 |  |
-| 4 | Tạo execution IAM Role cho Lambda với AWSLambdaBasicExecutionRole cùng một inline policy least-privilege chỉ trỏ tới bucket cần thiết. | 01/07/2026 | 01/07/2026 | [IAM Role](https://000048.awsstudygroup.com) |
-| 5 | Tách biến môi trường cho local và cloud (tên bucket, region, tên bảng) để cùng một code chạy được ở cả hai. | 02/07/2026 | 02/07/2026 |  |
-| 6 | Kiểm thử Lambda bằng `invoke` trực tiếp với event payload mẫu và đọc log CloudWatch trước khi nối API. | 03/07/2026 | 03/07/2026 |  |
+| 2 | Viết Lambda handler điều hướng request theo method/path và đóng gói file zip deploy lên runtime Python. | 29/06/2026 | 29/06/2026 | [Serverless lab](https://000078.awsstudygroup.com) |
+| 3 | Tối ưu thời gian cold start bằng cách điều chỉnh bộ nhớ (512 MB), timeout (15s) và dùng biến môi trường. | 30/06/2026 | 30/06/2026 |  |
+| 4 | Tạo Execution Role cho Lambda gồm `AWSLambdaBasicExecutionRole` và inline policy giới hạn quyền truy cập S3 bucket. | 01/07/2026 | 01/07/2026 | [IAM Role](https://000048.awsstudygroup.com) |
+| 5 | Quản lý cấu hình linh hoạt qua biến môi trường (bucket name, region, DynamoDB table) để code chạy tương thích cả local và cloud. | 02/07/2026 | 02/07/2026 |  |
+| 6 | Thực thi test trực tiếp Lambda qua lệnh `invoke` với payload mẫu và kiểm tra log chi tiết trên CloudWatch. | 03/07/2026 | 03/07/2026 |  |
 
 ### Kết quả đạt được
 
-1. Back-end chạy hoàn toàn serverless trên Lambda, đã xử lý cold start và tinh chỉnh tài nguyên.
-2. Lambda có IAM Role riêng theo least-privilege thay vì cấp quyền rộng.
-3. Hàm Lambda kiểm thử độc lập đạt yêu cầu trước khi tích hợp.
+1. Triển khai thành công back-end serverless trên Lambda, tối ưu tốt tài nguyên và thời gian cold start.
+2. Thiết lập IAM Execution Role riêng chuẩn least-privilege cho Lambda.
+3. Hoàn tất kiểm thử độc lập hàm Lambda và theo dõi log trên CloudWatch trước khi nối API Gateway.

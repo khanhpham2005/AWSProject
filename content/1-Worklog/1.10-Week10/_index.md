@@ -8,21 +8,21 @@ pre: " <b> 1.10. </b> "
 
 ### Week 10 objectives
 
-* Search files by content and move the frontend to S3 + CloudFront.
-* Add CloudWatch monitoring and reduce cost.
+* Implement file content search and host the frontend on S3 + CloudFront.
+* Set up CloudWatch monitoring and optimize operational costs.
 
 ### Tasks during the week (03/08 - 07/08/2026)
 
 | Day | Task | Start | End | Reference |
 | --- | --- | --- | --- | --- |
-| Mon | Build file search over the Rekognition labels and Textract text in DynamoDB, matching a keyword against the stored label and text attributes for the owner. | 03/08/2026 | 03/08/2026 |  |
-| Tue | Add an `/ask` endpoint that answers over the whole library and cites which file each answer came from. | 04/08/2026 | 04/08/2026 |  |
-| Wed | Host the frontend on S3 + CloudFront with HTTPS and Origin Access Control, so the file bucket stays private behind the distribution. | 05/08/2026 | 05/08/2026 | [CloudFront](https://cloudjourney.awsstudygroup.com/1-explore/) |
-| Thu | Have Lambda log to CloudWatch and create a metric alarm on the function Errors metric. | 06/08/2026 | 06/08/2026 |  |
-| Fri | Optimize cost (an S3 lifecycle rule for old objects, CloudFront cache TTL) and review least-privilege across the system. | 07/08/2026 | 07/08/2026 |  |
+| Mon | Query image labels (Rekognition) and extracted text (Textract) in DynamoDB matching user search keywords. | 03/08/2026 | 03/08/2026 |  |
+| Tue | Develop the `/ask` endpoint supporting Q&A across the entire document library with detailed file source citations. | 04/08/2026 | 04/08/2026 |  |
+| Wed | Host static frontend on S3 integrated with CloudFront (HTTPS, Origin Access Control) to secure the private bucket. | 05/08/2026 | 05/08/2026 | [CloudFront](https://cloudjourney.awsstudygroup.com/1-explore/) |
+| Thu | Configure Lambda log forwarding to CloudWatch and set up CloudWatch Alarms for function error metrics. | 06/08/2026 | 06/08/2026 |  |
+| Fri | Optimize costs (S3 Lifecycle Rules, CloudFront Caching TTL) and audit all IAM policies for least-privilege compliance. | 07/08/2026 | 07/08/2026 |  |
 
 ### Results achieved
 
-1. Files can be found by content (image labels or document text), and the `/ask` endpoint answers over the library with the source file cited.
-2. The frontend runs on S3 + CloudFront over HTTPS with Origin Access Control; the file bucket stays private.
-3. Lambda logs and an Errors alarm are in CloudWatch; cost is trimmed with S3 lifecycle and CloudFront TTL, and permissions were reviewed for least-privilege.
+1. Completed file content search and the library-wide `/ask` endpoint with specific file source citations.
+2. Deployed frontend securely via CloudFront + S3 using HTTPS and Origin Access Control.
+3. Integrated CloudWatch monitoring, optimized storage/data transfer costs, and enforced strict IAM permissions.

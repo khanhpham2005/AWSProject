@@ -8,21 +8,21 @@ pre: " <b> 1.6. </b> "
 
 ### Week 6 objectives
 
-* Expose the API to the frontend via API Gateway.
-* Complete the end-to-end flow on the cloud.
+* Expose public endpoints for the frontend via API Gateway.
+* Complete the end-to-end integration workflow on AWS.
 
 ### Tasks during the week (06/07 - 10/07/2026)
 
 | Day | Task | Start | End | Reference |
 | --- | --- | --- | --- | --- |
-| Mon | Create an HTTP API Gateway with Lambda proxy integration; define routes for each endpoint (POST /files, GET /files, GET /files/{id}). | 06/07/2026 | 06/07/2026 | [API Gateway lab](https://000079.awsstudygroup.com) |
-| Tue | Configure CORS at the API Gateway layer (allowed origins, methods, headers) and add the Lambda invoke permission for the gateway. | 07/07/2026 | 07/07/2026 |  |
-| Wed | Switch the frontend to call the API Gateway invoke URL instead of localhost. | 08/07/2026 | 08/07/2026 |  |
-| Thu | Test the API with Postman and the frontend; fix CORS preflight, IAM permission and proxy mapping errors. | 09/07/2026 | 09/07/2026 | Postman |
-| Fri | Review and finalize the full flow on the cloud: frontend → API Gateway → Lambda → presigned URL → direct upload to S3. | 10/07/2026 | 10/07/2026 |  |
+| Mon | Create an HTTP API Gateway with Lambda proxy integration and define routes (`POST /files`, `GET /files`, `GET /files/{id}`). | 06/07/2026 | 06/07/2026 | [API Gateway lab](https://000079.awsstudygroup.com) |
+| Tue | Configure CORS settings on API Gateway and grant invocation permissions to trigger Lambda. | 07/07/2026 | 07/07/2026 |  |
+| Wed | Update the frontend configuration to point calls to the API Gateway Invoke URL instead of local API. | 08/07/2026 | 08/07/2026 |  |
+| Thu | Test APIs using Postman and frontend, resolve CORS preflight issues and IAM permission errors. | 09/07/2026 | 09/07/2026 | Postman |
+| Fri | Review and finalize the end-to-end processing pipeline from Frontend to S3 on AWS. | 10/07/2026 | 10/07/2026 |  |
 
 ### Results achieved
 
-1. API Gateway provides a public endpoint the frontend can call with correct CORS.
-2. The frontend now calls API Gateway instead of the local back-end.
-3. Resolved common integration errors and completed the end-to-end cloud flow.
+1. API Gateway operational with public endpoints and properly configured CORS for frontend integration.
+2. Successfully switched frontend requests from local backend to API Gateway.
+3. Resolved integration issues and completed the full serverless end-to-end workflow on the cloud.

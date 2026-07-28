@@ -6,28 +6,28 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-Kỳ thực tập tại **Công ty TNHH Amazon Web Services Việt Nam** (chương trình First Cloud AI Journey) diễn ra từ **01/06/2026** đến **15/08/2026**.
+Thực tập tại **Công ty TNHH Amazon Web Services Việt Nam** (chương trình First Cloud AI Journey) từ **01/06/2026** đến **15/08/2026**.
 
-Sản phẩm chính là **InsightShare**, ứng dụng web upload và chia sẻ ảnh/tài liệu theo hướng serverless trên AWS. Quá trình làm việc trực tiếp với S3, Lambda, API Gateway, DynamoDB, CloudFront, IAM, CloudWatch; ngôn ngữ Python (boto3); tài liệu kỹ thuật viết song ngữ.
+Sản phẩm chính: **InsightShare** – ứng dụng serverless upload và chia sẻ ảnh/tài liệu trên AWS. Xây dựng bằng Python (`boto3`) kết hợp S3, Lambda, API Gateway, DynamoDB, CloudFront, IAM, CloudWatch; tài liệu viết song ngữ.
 
-Bảng dưới tự đánh giá theo tám tiêu chí, mỗi tiêu chí một mức: Tốt / Khá.
+Đánh giá cá nhân theo 8 tiêu chí:
 
 | STT | Tiêu chí | Tốt | Khá | Nhận xét |
 | --- | --- | --- | --- | --- |
-| 1 | **Kiến thức và kỹ năng chuyên môn** | x | | Áp dụng được các dịch vụ AWS cốt lõi vào một dự án end-to-end. |
-| 2 | **Khả năng học hỏi** | x | | Tự học các dịch vụ mới (Lambda, presigned URL, CloudFront) qua tài liệu và lab. |
-| 3 | **Tính chủ động** | x | | Chủ động trong thiết kế và tự tìm hiểu các dịch vụ cần dùng. |
-| 4 | **Kỷ luật** | | x | Giữ lịch lên văn phòng cố định và nộp worklog hàng tuần đúng hạn. |
-| 5 | **Giao tiếp** | x | | Báo cáo công việc rõ bằng văn bản và tài liệu kỹ thuật song ngữ. |
-| 6 | **Hợp tác nhóm** | | x | Hòa nhập với nhóm, hỏi mentor khi vướng, và hỗ trợ khi cần. |
-| 7 | **Tư duy giải quyết vấn đề** | x | | Chẩn đoán các lỗi tích hợp (CORS, IAM, cold start, S3 307, `Decimal` của DynamoDB) từ log CloudWatch. |
-| 8 | **Đóng góp cho dự án** | x | | Tự làm InsightShare end-to-end và bổ sung tính năng thêm (xóa file, link có hạn, giới hạn upload). |
+| 1 | **Kỹ năng chuyên môn** | x | | Áp dụng thành thạo các dịch vụ AWS cốt lõi vào dự án end-to-end. |
+| 2 | **Khả năng học hỏi** | x | | Chủ động tự học công nghệ mới (Lambda, presigned URL, CloudFront) qua tài liệu & lab. |
+| 3 | **Tính chủ động** | x | | Tiên phong trong thiết kế hệ thống và nghiên cứu dịch vụ phù hợp. |
+| 4 | **Kỷ luật** | | x | Đảm bảo lịch lên văn phòng và nộp worklog hàng tuần đúng hạn. |
+| 5 | **Giao tiếp** | x | | Báo cáo công việc rõ ràng, hoàn thiện tài liệu kỹ thuật song ngữ. |
+| 6 | **Hợp tác nhóm** | | x | Hòa nhập tốt, chủ động tham vấn mentor và hỗ trợ đồng đội. |
+| 7 | **Tư duy giải quyết vấn đề** | x | | Tra cứu log CloudWatch để xử lý triệt để lỗi tích hợp (CORS, IAM, cold start, S3 307, `Decimal` DynamoDB). |
+| 8 | **Đóng góp dự án** | x | | Phát triển InsightShare end-to-end và mở rộng tính năng (xóa file, link hết hạn, giới hạn upload). |
 
 ### Bài học kỹ thuật
 
-* Hành vi presigned URL khác nhau giữa các region S3: endpoint toàn cầu mặc định trả HTTP 307 với bucket ở Singapore, nên client phải ép endpoint theo region và dùng Signature V4 để có URL chạy được.
-* Lambda đang chạy cache credentials của môi trường thực thi, nên thay đổi policy IAM chỉ có hiệu lực sau khi cập nhật lại hoặc deploy lại function để tạo môi trường chạy mới.
-* `text` là từ khóa dành riêng của DynamoDB, nên update expression chạm vào nó cần `ExpressionAttributeNames` để đặt bí danh.
-* DynamoDB trả số dưới dạng `Decimal` của Python, mà `json.dumps` không serialize được; mọi response API cần một JSON encoder tùy chỉnh.
-* Các lệnh gọi AI (Textract, Bedrock) nên fail soft và được bọc lại, để một dịch vụ không sẵn sàng suy giảm êm thay vì làm hỏng cả luồng upload và phân tích.
-* Log CloudWatch là công cụ chính để chẩn đoán lỗi runtime serverless, vì không có máy chủ nào để gắn vào.
+* S3 presigned URL ở Singapore yêu cầu client ép endpoint theo region và dùng Signature V4 để tránh lỗi HTTP 307.
+* Lambda cache credentials trong execution environment, cần deploy/update lại function để áp dụng policy IAM mới.
+* `text` là DynamoDB reserved keyword, bắt buộc dùng `ExpressionAttributeNames` khi update.
+* DynamoDB trả số dạng `Decimal`, cần JSON encoder tùy chỉnh để tránh lỗi serialization với `json.dumps`.
+* Tích hợp AI (Textract, Bedrock) cần cơ chế fail-soft để hệ thống hoạt động ổn định khi dịch vụ gặp sự cố.
+* CloudWatch log là công cụ chẩn đoán lỗi cốt lõi cho ứng dụng serverless.

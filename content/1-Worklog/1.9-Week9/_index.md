@@ -8,21 +8,21 @@ pre: " <b> 1.9. </b> "
 
 ### Week 9 objectives
 
-* Add the AI layer so the system understands file content, per user.
-* Use AWS managed AI services, no model training.
+* Integrate AI services to analyze and understand file content on a per-user basis.
+* Utilize AWS managed AI services instead of self-training models.
 
 ### Tasks during the week (27/07 - 31/07/2026)
 
 | Day | Task | Start | End | Reference |
 | --- | --- | --- | --- | --- |
-| Mon | Study the FCAJ AI services workshop; settle how to call Rekognition and Textract from boto3 and where to trigger them in the upload flow. | 27/07/2026 | 27/07/2026 | [AI services](https://000056.awsstudygroup.com) |
-| Tue | Call Rekognition `detect_labels` (MaxLabels=10, MinConfidence=70) to tag images on upload; store the labels for search. | 28/07/2026 | 28/07/2026 |  |
-| Wed | Call Textract `detect_document_text` to extract text from PDFs and scanned images; read `.txt` files straight from the S3 object. | 29/07/2026 | 29/07/2026 |  |
-| Thu | Add the `POST /files/{id}/ask` endpoint: send the extracted text plus a question to a Claude model on Amazon Bedrock (`invoke_model`) and return the answer in the same language as the question; with no question, summarize instead. | 30/07/2026 | 30/07/2026 | [Bedrock](https://docs.aws.amazon.com/bedrock/) |
-| Fri | Extend the IAM Role with least-privilege rekognition/textract/bedrock permissions; save the labels and extracted text to DynamoDB under the owner; test the whole pipeline. | 31/07/2026 | 31/07/2026 |  |
+| Mon | Study FCAJ's AI services workshop, determining integration points for Rekognition and Textract within the upload pipeline. | 27/07/2026 | 27/07/2026 | [AI services](https://000056.awsstudygroup.com) |
+| Tue | Integrate Amazon Rekognition (`detect_labels`) to automatically tag uploaded image files. | 28/07/2026 | 28/07/2026 |  |
+| Wed | Utilize Amazon Textract (`detect_document_text`) to extract text from PDFs/images, and directly read `.txt` files from S3. | 29/07/2026 | 29/07/2026 |  |
+| Thu | Develop the `POST /files/{id}/ask` endpoint connecting to Claude on Amazon Bedrock (`invoke_model`) for document Q&A and summarization. | 30/07/2026 | 30/07/2026 | [Bedrock](https://docs.aws.amazon.com/bedrock/) |
+| Fri | Extend IAM Role permissions (Rekognition/Textract/Bedrock), store labels and text in DynamoDB by owner, and test the full pipeline. | 31/07/2026 | 31/07/2026 |  |
 
 ### Results achieved
 
-1. Uploaded images are auto-labeled with Rekognition; documents have text extracted by Textract (`.txt` read directly), and both are stored under the file owner.
-2. A document Q&A endpoint answers questions and summarizes in the same language as the question via Bedrock/Claude. Textract and Bedrock are wired in with fail-soft handling, so an unavailable AI service does not break the analysis flow.
-3. Labels and text are saved to DynamoDB for later search; the AI permissions are least-privilege.
+1. Automated image tagging (Rekognition) and text extraction (Textract/S3), storing analytical data per user.
+2. Completed document Q&A and summarization features via Bedrock (Claude) supporting multi-language responses with a fail-soft mechanism to prevent flow disruptions.
+3. Stored AI metadata in DynamoDB as a foundation for search functionality, enforcing least-privilege IAM policies.

@@ -8,21 +8,21 @@ pre: " <b> 1.8. </b> "
 
 ### Week 8 objectives
 
-* Add user sign-in with Amazon Cognito.
-* Scope file data per user so each person only sees their own files.
+* Integrate Amazon Cognito for user authentication management.
+* Isolate data by user, ensuring privacy for each account.
 
 ### Tasks during the week (20/07 - 24/07/2026)
 
 | Day | Task | Start | End | Reference |
 | --- | --- | --- | --- | --- |
-| Mon | Create a Cognito user pool and an app client with USER_PASSWORD_AUTH; note the pool id, client id and token endpoint. | 20/07/2026 | 20/07/2026 | [Cognito lab](https://000081.awsstudygroup.com) |
-| Tue | Add a JWT authorizer to the API Gateway `$default` route; add an unauthenticated OPTIONS route so the CORS preflight is not blocked with 401. | 21/07/2026 | 21/07/2026 |  |
-| Wed | Read the `sub` claim from the JWT in Lambda (a `current_user` helper) to identify the caller and filter files by owner. | 22/07/2026 | 22/07/2026 |  |
-| Thu | Wire the frontend to call cognito-idp directly for sign-up, confirm and sign-in, without an external library. | 23/07/2026 | 23/07/2026 |  |
-| Fri | Test the flow: sign-up → confirm → sign-in → call the API with the token (200), without a token (401), and OPTIONS (200). | 24/07/2026 | 24/07/2026 | Postman |
+| Mon | Initialize Cognito User Pool and App Client (`USER_PASSWORD_AUTH` mode), saving Pool ID and Client ID configurations. | 20/07/2026 | 20/07/2026 | [Cognito lab](https://000081.awsstudygroup.com) |
+| Tue | Integrate JWT Authorizer into API Gateway and open public OPTIONS routes to handle CORS preflight. | 21/07/2026 | 21/07/2026 |  |
+| Wed | Update Lambda to extract `sub` claims from JWTs to identify users and filter data accordingly. | 22/07/2026 | 22/07/2026 |  |
+| Thu | Connect registration, confirmation, and login flows directly from the frontend using `cognito-idp` without external libraries. | 23/07/2026 | 23/07/2026 |  |
+| Fri | Test the entire flow: register → confirm → log in → invoke API with token (200), without token (401), and OPTIONS (200). | 24/07/2026 | 24/07/2026 | Postman |
 
 ### Results achieved
 
-1. Users can sign up, confirm and sign in through Cognito; the API accepts requests only with a valid JWT.
-2. Lambda reads the `sub` claim to know the caller and returns files filtered by owner, so each user sees only their own.
-3. The OPTIONS route stays unauthenticated, so the CORS preflight passes while other routes require a token.
+1. Completed user authentication system via Cognito; secured API Gateway using a JWT Authorizer.
+2. Ensured user data privacy: Lambda automatically enforces permissions and returns only files owned by the respective user.
+3. Fully handled CORS preflight flows via OPTIONS routes, ensuring the API correctly blocks unauthorized requests.

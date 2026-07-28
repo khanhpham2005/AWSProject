@@ -8,21 +8,21 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10
 
-* Tìm kiếm file theo nội dung và đưa frontend lên S3 + CloudFront.
-* Thêm giám sát CloudWatch và giảm chi phí.
+* Triển khai tìm kiếm nội dung file và host frontend trên S3 + CloudFront.
+* Thiết lập giám sát CloudWatch và tối ưu chi phí vận hành.
 
 ### Các công việc trong tuần (03/08 - 07/08/2026)
 
 | Thứ | Công việc | Bắt đầu | Hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | Xây tìm kiếm file theo nhãn Rekognition và text Textract trong DynamoDB, khớp từ khóa với thuộc tính nhãn và text đã lưu của owner. | 03/08/2026 | 03/08/2026 |  |
-| 3 | Thêm endpoint `/ask` trả lời trên toàn thư viện và trích nguồn từng câu trả lời lấy từ file nào. | 04/08/2026 | 04/08/2026 |  |
-| 4 | Host frontend lên S3 + CloudFront với HTTPS và Origin Access Control, để bucket file vẫn private phía sau distribution. | 05/08/2026 | 05/08/2026 | [CloudFront](https://cloudjourney.awsstudygroup.com/1-explore/) |
-| 5 | Cho Lambda ghi log sang CloudWatch và tạo metric alarm trên metric Errors của hàm. | 06/08/2026 | 06/08/2026 |  |
-| 6 | Tối ưu chi phí (lifecycle rule xóa object cũ trên S3, TTL cache CloudFront) và rà soát least-privilege toàn hệ thống. | 07/08/2026 | 07/08/2026 |  |
+| 2 | Phân tích và truy vấn dữ liệu nhãn (Rekognition) và text (Textract) trong DynamoDB theo từ khóa của từng user. | 03/08/2026 | 03/08/2026 |  |
+| 3 | Phát triển endpoint `/ask` hỗ trợ hỏi đáp trên toàn bộ thư viện tài liệu kèm trích dẫn nguồn file chi tiết. | 04/08/2026 | 04/08/2026 |  |
+| 4 | Host static frontend trên S3 kết hợp CloudFront (HTTPS, Origin Access Control) để bảo mật bucket private. | 05/08/2026 | 05/08/2026 | [CloudFront](https://cloudjourney.awsstudygroup.com/1-explore/) |
+| 5 | Cấu hình log Lambda chuyển tiếp CloudWatch và thiết lập CloudWatch Alarm cảnh báo khi phát sinh lỗi. | 06/08/2026 | 06/08/2026 |  |
+| 6 | Tối ưu chi phí (S3 Lifecycle Rules, CloudFront Caching TTL) và rà soát toàn bộ IAM policies chuẩn least-privilege. | 07/08/2026 | 07/08/2026 |  |
 
 ### Kết quả đạt được
 
-1. Tìm được file theo nội dung (nhãn ảnh hoặc text tài liệu), và endpoint `/ask` trả lời trên toàn thư viện có trích nguồn file.
-2. Frontend chạy trên S3 + CloudFront qua HTTPS với Origin Access Control; bucket file vẫn private.
-3. Log Lambda và alarm Errors đã có trên CloudWatch; chi phí được giảm bằng lifecycle S3 và TTL CloudFront, quyền được rà soát theo least-privilege.
+1. Hoàn thiện tìm kiếm nội dung file và endpoint `/ask` tổng hợp thông tin kèm trích dẫn nguồn cụ thể.
+2. Triển khai frontend an toàn qua CloudFront + S3 với HTTPS và Origin Access Control.
+3. Tích hợp giám sát CloudWatch, tối ưu chi phí lưu trữ/truyền tải và siết chặt phân quyền IAM.

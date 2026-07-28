@@ -8,21 +8,21 @@ pre: " <b> 1.11. </b> "
 
 ### Week 11 objectives
 
-* Test end-to-end, tune performance and finish the system.
-* Script the teardown and clean up all resources.
+* Perform end-to-end testing, optimize performance, and finalize the system.
+* Automate deployment workflows and clean up all AWS resources.
 
 ### Tasks during the week (10/08 - 14/08/2026)
 
 | Day | Task | Start | End | Reference |
 | --- | --- | --- | --- | --- |
-| Mon | Write a deploy script (zip the function and run `aws lambda update-function-code`) so re-deploying after a code change is one command. | 10/08/2026 | 10/08/2026 |  |
-| Tue | Run end-to-end and failure testing: large files, expired presigned links, wrong permissions, and concurrent uploads. | 11/08/2026 | 11/08/2026 | Postman |
-| Wed | Measure AI processing time and search latency in CloudWatch and tune Lambda memory to bring the durations down. | 12/08/2026 | 12/08/2026 |  |
-| Thu | Write the teardown script (cleanup-aws.ps1) to remove the whole stack; note Step Functions as a way to orchestrate the multi-step AI pipeline later. | 13/08/2026 | 13/08/2026 | [Modernize](https://cloudjourney.awsstudygroup.com/4-modernize/) |
-| Fri | Record the demo video and finalize the bilingual report. | 14/08/2026 | 14/08/2026 |  |
+| Mon | Write a deployment script to automate packaging (ZIP) and code updates via `aws lambda update-function-code`. | 10/08/2026 | 10/08/2026 |  |
+| Tue | Conduct end-to-end and edge-case testing (large files, expired presigned URLs, permission errors, concurrent uploads). | 11/08/2026 | 11/08/2026 | Postman |
+| Wed | Measure AI processing latency and search speeds via CloudWatch, fine-tuning Lambda memory allocations accordingly. | 12/08/2026 | 12/08/2026 |  |
+| Thu | Develop a resource cleanup script (`cleanup-aws.ps1`) and document AWS Step Functions usage for future multi-step AI orchestration. | 13/08/2026 | 13/08/2026 | [Modernize](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| Fri | Record the product demo video and finalize the bilingual project report. | 14/08/2026 | 14/08/2026 |  |
 
 ### Results achieved
 
-1. Deploy and teardown are scripted (zip + update-function-code; cleanup-aws.ps1), so re-deploying and cleaning up are single commands.
-2. The system was tested end-to-end and across failure cases; Lambda memory was tuned from the CloudWatch durations to lower latency.
-3. The system is complete, with a demo video and a bilingual report; Step Functions is noted as a direction to orchestrate the AI pipeline later.
+1. Fully scripted deployment and cleanup processes into single commands (ZIP + `update-function-code` and `cleanup-aws.ps1`).
+2. Completed end-to-end testing, gracefully handled error scenarios, and reduced Lambda execution latency using CloudWatch metrics.
+3. Delivered a complete project package including a demo video, bilingual report, and architecture notes on scaling AI pipelines via Step Functions.

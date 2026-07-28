@@ -8,22 +8,22 @@ pre: " <b> 1.2. </b> "
 
 ### Week 2 objectives
 
-* Design the InsightShare architecture and write the Proposal.
-* Set up the AWS account securely to start working.
-* Study presigned URLs and the AI services to be used.
+* Design InsightShare architecture and finalize the proposal.
+* Set up a secure AWS account and initial environment setup.
+* Research presigned URLs and operational mechanisms of AWS AI services.
 
 ### Tasks during the week (08/06 - 12/06/2026)
 
 | Day | Task | Start | End | Reference |
 | --- | --- | --- | --- | --- |
-| Mon | Study IAM: users, groups, roles, the difference between identity and resource policies, and the least-privilege principle to apply per service later. | 08/06/2026 | 08/06/2026 | [AWS IAM](https://000002.awsstudygroup.com) |
-| Tue | Draw the InsightShare serverless architecture in draw.io: browser → CloudFront/S3 → API Gateway → Lambda → S3/DynamoDB and the Rekognition/Textract/Bedrock branch. | 09/06/2026 | 09/06/2026 | [draw.io](https://draw.io/) |
-| Wed | Write the Proposal: problem, solution, the AWS services table (10 services) and the rationale for each, all in region ap-southeast-1. | 10/06/2026 | 10/06/2026 |  |
-| Thu | Create the AWS account, enable root MFA, create a dedicated IAM user with admin off-root, configure the AWS CLI with `aws configure`, and set a monthly Budget alert. | 11/06/2026 | 11/06/2026 |  |
-| Fri | Design the DynamoDB metadata table (partition key fileId, attributes for owner, timestamp, AI labels and extracted text); study presigned URLs and the AI APIs detect_labels, detect_document_text and Bedrock invoke_model. | 12/06/2026 | 12/06/2026 | [AI services](https://000056.awsstudygroup.com) |
+| Mon | Study AWS IAM: user, group, role, identity vs. resource policies, and least-privilege principles. | 08/06/2026 | 08/06/2026 | [AWS IAM](https://000002.awsstudygroup.com) |
+| Tue | Draw InsightShare serverless architecture diagram (CloudFront, S3, API Gateway, Lambda, DynamoDB, Rekognition, Textract, Bedrock). | 09/06/2026 | 09/06/2026 | [draw.io](https://draw.io/) |
+| Wed | Write Proposal: problem analysis, solutions, and selection rationale for 10 AWS services in `ap-southeast-1` region. | 10/06/2026 | 10/06/2026 |  |
+| Thu | Initialize AWS account: enable Root MFA, create admin IAM User, configure AWS CLI, and set up AWS Budgets alerts. | 11/06/2026 | 11/06/2026 |  |
+| Fri | Design DynamoDB file metadata schema; study presigned URL flows and AI service API invocation models. | 12/06/2026 | 12/06/2026 | [AI services](https://000056.awsstudygroup.com) |
 
 ### Results achieved
 
-1. Produced the architecture diagram and a complete Proposal explaining each choice.
-2. Set up the AWS account to security standards: MFA, dedicated IAM user, Budgets, CLI.
-3. Understood presigned URLs and how the AI services will be called.
+1. Completed serverless architecture diagram and detailed proposal for InsightShare system.
+2. Established secure AWS environment setup (MFA, IAM User, AWS CLI, Budgets).
+3. Mastered presigned URL mechanism and integration patterns for AWS managed AI APIs.
