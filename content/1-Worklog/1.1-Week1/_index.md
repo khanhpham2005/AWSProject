@@ -8,22 +8,20 @@ pre: " <b> 1.1. </b> "
 
 ### Week 1 objectives
 
-* Get familiar with the FCAJ program, rules and attendance process.
-* Grasp AWS fundamentals and choose an architecture direction for the topic.
-* Finalize the InsightShare topic and set up the report skeleton.
+* Get familiar with the FCAJ program content, rules, and objectives.
+* Get an initial overview of AWS, the Management Console, and core services.
 
 ### Tasks during the week (01/06 - 05/06/2026)
 
 | Day | Task | Start | End | Reference |
 | --- | --- | --- | --- | --- |
-| Mon | Read the rules; learn the Portal registration and attendance process, the points/seal system and weekly deadlines. | 01/06/2026 | 01/06/2026 | [FCAJ rules](https://hcm-rules.awsfcaj.com/) |
-| Tue | Study AWS fundamentals: the compute/storage/database/networking service groups and the pay-as-you-go pricing model, plus how the Free Tier applies to the topic. | 02/06/2026 | 02/06/2026 | [Module 1](https://cloudjourney.awsstudygroup.com/1-explore/) |
-| Wed | Compare EC2 vs serverless on cost, operations and scaling (no server to manage, pay-per-request, auto-scaling); pick serverless for InsightShare. | 03/06/2026 | 03/06/2026 | [AWS Study Group](https://www.youtube.com/@AWSStudyGroup) |
-| Thu | Sketch the InsightShare idea: file sharing where uploads are auto-analyzed by AWS AI services (Rekognition, Textract) for smart search, with Bedrock/Claude for document Q&A. | 04/06/2026 | 04/06/2026 |  |
-| Fri | Set up the bilingual Hugo report skeleton (EN + VI per page); get familiar with Markdown tables and drawing architecture diagrams in draw.io. | 05/06/2026 | 05/06/2026 | [Hugo](https://gohugo.io/) |
+| Mon | Read the rules; learn the FCAJ program objectives, the Portal registration and attendance process, and the points/seal system. | 01/06/2026 | 01/06/2026 | [FCAJ rules](https://hcm-rules.awsfcaj.com/) |
+| Tue | Learn an overview of AWS cloud computing, the pay-as-you-go pricing model, and AWS Free Tier policies. | 02/06/2026 | 02/06/2026 | [Module 1](https://cloudjourney.awsstudygroup.com/1-explore/) |
+| Wed | Get familiar with the AWS Management Console interface, service navigation, and basic account configuration. | 03/06/2026 | 03/06/2026 | [AWS Console](https://aws.amazon.com/console/) |
+| Thu | Study core AWS service groups including Compute (EC2), Storage (S3), Database (RDS/DynamoDB), and Networking (VPC). | 04/06/2026 | 04/06/2026 | [AWS Study Group](https://www.youtube.com/@AWSStudyGroup) |
+| Fri | Summarize key learnings, practice basic tasks on the Console, and build the Hugo worklog report structure. | 05/06/2026 | 05/06/2026 | [Hugo](https://gohugo.io/) |
 
 ### Results achieved
 
-1. Understood the attendance process and how the program runs.
-2. Grasped AWS service and pricing models and settled on serverless for the topic.
-3. Finalized the InsightShare idea and set up the bilingual report skeleton.
+1. Clearly understood the operating rules, submission procedures, and learning objectives of the FCAJ program.
+2. Grasped foundational AWS cloud knowledge, navigated the AWS Management Console proficiently, and understood core service offerings.
