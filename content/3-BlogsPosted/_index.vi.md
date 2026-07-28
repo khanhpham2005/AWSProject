@@ -5,6 +5,7 @@ weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
+(Các bài đăng bởi thành viên nhóm Đặng Thái Khang)
 
 Ba bài đăng lên nhóm [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj) trong kỳ thực tập, mỗi bài tóm tắt một bài viết gần đây từ blog chính thức của AWS kèm một bài học ngắn.
 

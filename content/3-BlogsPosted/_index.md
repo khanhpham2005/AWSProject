@@ -5,6 +5,7 @@ weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
+(Posts by team member Dang Thai Khang )
 
 Three posts published to the [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj) during the internship, each summarizing a recent article from the official AWS blogs with a short takeaway.
 
