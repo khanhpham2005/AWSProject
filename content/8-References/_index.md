@@ -10,7 +10,7 @@ pre: " <b> 8. </b> "
 
 | Resource | Link |
 | --- | --- |
-| Source code | [github.com/XeminoL/InsightShare](https://github.com/XeminoL/InsightShare) |
+| Original source code of project| [github.com/XeminoL/InsightShare](https://github.com/XeminoL/InsightShare) |
 | Live application | [insightshare.dangthaikhang34.workers.dev](https://insightshare.dangthaikhang34.workers.dev) |
 
 ### Documentation
