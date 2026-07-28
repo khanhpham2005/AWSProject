@@ -1,21 +1,21 @@
 ---
 title: "Báo cáo thực tập"
-date: 2026-06-29
+date: 2026-07-20
 weight: 1
 chapter: false
 ---
 # Báo cáo thực tập 
 
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Đặng Thái Khang
+&emsp; **Họ và tên:** Phạm Văn Khánh
 
-&emsp; **Số điện thoại:** 0395134543
+&emsp; **Số điện thoại:** 0705990427
 
-&emsp; **Email:** dangthaikhang34@gmail.com
+&emsp; **Email:** khanh.pham2005@hcmut.edu.vn
 
 &emsp; **Trường:** Trường Đại học Bách Khoa - ĐHQG TP.HCM
 
-&emsp; **Ngành:** Kỹ thuật Máy tính
+&emsp; **Ngành:** Khoa học Máy tính
 
 &emsp; **Group FCAJ:** AWS062026
 
@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 01/06/2026 đến ngày 15/08/2026
 
-![Đặng Thái Khang](/images/avatar-v2.png)
+![Đặng Thái Khang](/images/avatar.png)
 
 ### Nội dung báo cáo
 1.  [Worklog](1-Worklog/)

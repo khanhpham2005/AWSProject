@@ -1,21 +1,21 @@
 ---
 title: "Internship Report"
-date: 2026-06-29
+date: 2026-07-20
 weight: 1
 chapter: false
 ---
 # Internship Report
 
 ### Student Information:
-&emsp; **Full Name:** Dang Thai Khang
+&emsp; **Full Name:** Pham Van Khanh
 
-&emsp; **Phone Number:** 0395134543
+&emsp; **Phone Number:** 0705990427
 
-&emsp; **Email:** dangthaikhang34@gmail.com
+&emsp; **Email:** khanh.pham2005@hcmut.edu.vn
 
 &emsp; **University:** Ho Chi Minh City University of Technology 
 
-&emsp; **Major:** Computer Engineering
+&emsp; **Major:** Computer Science
 
 &emsp; **FCAJ Group:** AWS062026
 
@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 01/06/2026 to 15/08/2026
 
-![Dang Thai Khang](/images/avatar-v2.png)
+![Dang Thai Khang](/images/avatar.png)
 
 ### Report Content
 1.  [Worklog](1-Worklog/)
